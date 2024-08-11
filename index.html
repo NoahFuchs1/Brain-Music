@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musik App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <!-- Startseite -->
+    <div id="playlistPage" class="page">
+        <header>
+            <h1>Deine Playlists</h1>
+            <button id="addPlaylistBtn" class="add-btn">+</button>
+        </header>
+        <ul id="playlistContainer"></ul>
+    </div>
+
+    <!-- Musikbibliothek -->
+    <div id="libraryPage" class="page hidden">
+        <header>
+            <button id="backToPlaylists" class="back-btn">&larr;</button>
+            <h1>Music</h1>
+            <button id="addSongsBtn" class="add-btn">Hinzufügen</button>
+        </header>
+        <ul id="musicLibrary"></ul>
+    </div>
+
+    <!-- Playlist-Seite -->
+    <div id="playlistDetailPage" class="page hidden">
+        <header>
+            <button id="backToPlaylistsDetail" class="back-btn">&larr;</button>
+            <h1 id="playlistTitle">Playlist Name</h1>
+        </header>
+        <div class="timer-container">
+            <p>IN FOCUS</p>
+            <h2 id="timer">0:00</h2>
+        </div>
+
+        <div class="player-container">
+            <!-- HTML Code -->
+            <h3 id="currentSongTitle"></h3>
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="" type="audio/mp3">
+            </audio>
+            <div class="controls">
+                <button id="prevSongBtn" class="control-btn">
+                    <img src="back.png">
+                </button>
+                <button id="nextSongBtn" class="control-btn">
+                    <img src="next button.png"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
